@@ -1,0 +1,22 @@
+<div class="container mt-5">
+	<h2>Jugadores</h2>
+	<table class="table table-hover animated fadeIn">
+	  <thead>
+	    <tr>
+	    	<th scope="col">Ranking</th>
+	      <th scope="col">Nombre</th>
+	      <th scope="col">Posición</th>
+	      <th scope="col">Partidos jugados</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<tr *ngFor="let jugador of jugadores">
+	  		<th scope="row">{{jugador.rank}}</th>
+				<td><a routerLink="/jugador/1" routerLinkActive="active">{{jugador.nombre}} {{jugador.apellido1}} {{jugador.apellido2}}</a></td>
+				<td>{{jugador.posicion}}</td>
+				<td>{{jugador.numPartidos}}</td>
+			</tr>
+	  </tbody>
+	</table>
+	<a routerLink="/jugador-crear" class="btn btn-info btn-lg">Crear Jugador</a>
+</div>
